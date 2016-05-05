@@ -7,6 +7,7 @@ import com.ljd.architecture.clean.domain.executor.PostExecutionThread;
 import com.ljd.architecture.clean.domain.executor.ThreadExecutor;
 import com.ljd.architecture.clean.presentation.AndroidApplication;
 import com.ljd.architecture.clean.presentation.UIThread;
+import com.ljd.architecture.clean.presentation.navigation.Navigator;
 
 import javax.inject.Singleton;
 
@@ -48,4 +49,5 @@ public class ApplicationModule {
 //    @Provides @Singleton UserRepository provideUserRepository(UserDataRepository userDataRepository) {
 //        return userDataRepository;
 //    }
+
 }

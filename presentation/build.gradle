@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
@@ -40,4 +41,5 @@ dependencies {
     compile presentationDependencies.recyclerview
     provided presentationDependencies.javaxAnnotation
     apt presentationDependencies.daggerCompiler
+    compile 'com.android.support:support-v4:23.3.0'
 }

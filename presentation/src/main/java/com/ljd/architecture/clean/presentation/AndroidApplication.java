@@ -2,11 +2,15 @@ package com.ljd.architecture.clean.presentation;
 
 import android.app.Application;
 
+import com.ljd.architecture.clean.presentation.internal.di.components.ApplicationComponent;
+import com.ljd.architecture.clean.presentation.internal.di.components.DaggerApplicationComponent;
+import com.ljd.architecture.clean.presentation.internal.di.modules.ApplicationModule;
+
 /**
  * Created by ljd on 5/4/16.
  */
 public class AndroidApplication extends Application {
-/*    private ApplicationComponent applicationComponent;
+    private ApplicationComponent applicationComponent;
 
     @Override public void onCreate() {
         super.onCreate();
@@ -25,8 +29,8 @@ public class AndroidApplication extends Application {
     }
 
     private void initializeLeakDetection() {
-        if (BuildConfig.DEBUG) {
-            LeakCanary.install(this);
-        }
-    }*/
+//        if (BuildConfig.DEBUG) {
+//            LeakCanary.install(this);
+//        }
+    }
 }
