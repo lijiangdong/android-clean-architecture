@@ -13,7 +13,6 @@ import dagger.Subcomponent;
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
-//@Subcomponent(modules = ActivityModule.class)
 public interface ActivityComponent {
     Activity activity();
 }

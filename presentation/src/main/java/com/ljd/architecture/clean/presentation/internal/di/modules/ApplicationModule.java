@@ -46,7 +46,7 @@ public class ApplicationModule {
 //        return userCache;
 //    }
 //
-//    @Provides @Singleton UserRepository provideUserRepository(UserDataRepository userDataRepository) {
+//    @Provides @Singleton ContributorRepository provideUserRepository(UserDataRepository userDataRepository) {
 //        return userDataRepository;
 //    }
 

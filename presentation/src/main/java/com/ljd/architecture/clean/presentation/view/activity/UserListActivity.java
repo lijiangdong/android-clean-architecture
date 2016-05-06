@@ -6,12 +6,12 @@ import android.os.Bundle;
 
 import com.ljd.architecture.clean.presentation.R;
 import com.ljd.architecture.clean.presentation.internal.di.HasComponent;
-import com.ljd.architecture.clean.presentation.internal.di.components.DaggerUserComponent;
-import com.ljd.architecture.clean.presentation.internal.di.components.UserComponent;
+import com.ljd.architecture.clean.presentation.internal.di.components.ContributorComponent;
+import com.ljd.architecture.clean.presentation.internal.di.components.DaggerContributorComponent;
 
-public class UserListActivity extends BaseActivity implements HasComponent<UserComponent>{
+public class UserListActivity extends BaseActivity implements HasComponent<ContributorComponent>{
 
-    private UserComponent userComponent;
+    private ContributorComponent contributorComponent;
 
     public static Intent getCallingIntent(Context context) {
         return new Intent(context, UserListActivity.class);
@@ -25,13 +25,13 @@ public class UserListActivity extends BaseActivity implements HasComponent<UserC
     }
 
     private void initializeInjector(){
-        this.userComponent = DaggerUserComponent.builder()
+        this.contributorComponent = DaggerContributorComponent.builder()
                 .applicationComponent(getApplicationComponent())
                 .activityModule(getActivityModule())
                 .build();
     }
     @Override
-    public UserComponent getComponent() {
-        return userComponent;
+    public ContributorComponent getComponent() {
+        return contributorComponent;
     }
 }

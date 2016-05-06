@@ -41,5 +41,4 @@ dependencies {
     compile presentationDependencies.recyclerview
     provided presentationDependencies.javaxAnnotation
     apt presentationDependencies.daggerCompiler
-    compile 'com.android.support:support-v4:23.3.0'
 }
