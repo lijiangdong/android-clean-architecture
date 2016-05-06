@@ -16,6 +16,7 @@ import javax.inject.Named;
 /**
  * Created by ljd on 5/6/16.
  */
+
 @PerActivity
 public class ContributorListPresenter implements Presenter {
 

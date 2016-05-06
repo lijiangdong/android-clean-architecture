@@ -3,8 +3,10 @@ package com.ljd.architecture.clean.presentation.internal.di.modules;
 import android.content.Context;
 
 import com.ljd.architecture.clean.data.executor.JobExecutor;
+import com.ljd.architecture.clean.data.responsitory.ContributorDataRepository;
 import com.ljd.architecture.clean.domain.executor.PostExecutionThread;
 import com.ljd.architecture.clean.domain.executor.ThreadExecutor;
+import com.ljd.architecture.clean.domain.reponsitory.ContributorRepository;
 import com.ljd.architecture.clean.presentation.AndroidApplication;
 import com.ljd.architecture.clean.presentation.UIThread;
 import com.ljd.architecture.clean.presentation.navigation.Navigator;
@@ -26,8 +28,7 @@ public class ApplicationModule {
         this.application = application;
     }
 
-    @Provides
-    @Singleton
+    @Provides @Singleton
     Context provideApplicationContext() {
         return this.application;
     }
@@ -46,8 +47,10 @@ public class ApplicationModule {
 //        return userCache;
 //    }
 //
-//    @Provides @Singleton ContributorRepository provideUserRepository(UserDataRepository userDataRepository) {
-//        return userDataRepository;
-//    }
+
+    @Provides @Singleton
+    ContributorRepository provideContributorRepository(ContributorDataRepository contributorDataRepository){
+        return contributorDataRepository;
+    }
 
 }

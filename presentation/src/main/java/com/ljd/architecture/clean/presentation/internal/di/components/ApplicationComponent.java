@@ -2,8 +2,10 @@ package com.ljd.architecture.clean.presentation.internal.di.components;
 
 import android.content.Context;
 
+import com.ljd.architecture.clean.data.responsitory.ContributorDataRepository;
 import com.ljd.architecture.clean.domain.executor.PostExecutionThread;
 import com.ljd.architecture.clean.domain.executor.ThreadExecutor;
+import com.ljd.architecture.clean.domain.reponsitory.ContributorRepository;
 import com.ljd.architecture.clean.presentation.internal.di.modules.ApplicationModule;
 import com.ljd.architecture.clean.presentation.view.activity.BaseActivity;
 
@@ -23,4 +25,6 @@ public interface ApplicationComponent {
     Context context();
     ThreadExecutor threadExecutor();
     PostExecutionThread postExecutionThread();
+    ContributorRepository contributorRepository();
+
 }

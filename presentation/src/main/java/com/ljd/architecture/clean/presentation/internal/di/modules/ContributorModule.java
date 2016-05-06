@@ -16,18 +16,13 @@ import dagger.Provides;
 @Module
 public class ContributorModule{
 
-    private int userId = -1;
-
     public ContributorModule() {}
-
-    public ContributorModule(int userId) {
-        this.userId = userId;
-    }
 
     @Provides
     @PerActivity
     @Named("contributorList")
-    UseCase provideGetContributorListUseCase(GetContributorList getContributorList){
+    public UseCase provideGetContributorListUseCase(
+            GetContributorList getContributorList){
         return getContributorList;
     }
 }
