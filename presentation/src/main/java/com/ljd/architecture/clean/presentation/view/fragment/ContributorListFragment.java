@@ -40,6 +40,7 @@ public class ContributorListFragment extends BaseFragment {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_user_list, container, false);
         ButterKnife.bind(this,layout);
+        this.loadContributorList();
         return layout;
     }
 

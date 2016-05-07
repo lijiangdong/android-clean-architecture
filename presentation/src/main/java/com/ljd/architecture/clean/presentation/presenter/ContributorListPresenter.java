@@ -1,5 +1,7 @@
 package com.ljd.architecture.clean.presentation.presenter;
 
+import android.util.Log;
+
 import com.ljd.architecture.clean.domain.Contributor;
 import com.ljd.architecture.clean.domain.interactor.DefaultSubscriber;
 import com.ljd.architecture.clean.domain.interactor.UseCase;
@@ -64,6 +66,9 @@ public class ContributorListPresenter implements Presenter {
     private void showContributorsCollectionInView(Collection<Contributor> contributorCollection){
         final Collection<ContributorModel> contributorModelCollection =
                 this.contributorModelDataMapper.transform(contributorCollection);
+        for (ContributorModel contributorModel : contributorModelCollection){
+            Log.d("contributorModel",contributorModel.toString());
+        }
     }
 
     private final class ContributorListSubscriber extends DefaultSubscriber<List<Contributor>>{

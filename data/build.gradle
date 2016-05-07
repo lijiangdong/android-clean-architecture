@@ -36,8 +36,20 @@ android {
 }
 
 dependencies {
+    def dataDependencies = rootProject.ext.dataDependencies
+    def testDependencies = rootProject.ext.dataTestDependencies
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.3.0'
     compile project(':domain')
+    compile dataDependencies.appcompat
+    apt     dataDependencies.daggerCompiler
+    compile dataDependencies.dagger
+    compile dataDependencies.loggingInterceptor
+    compile dataDependencies.retrofit
+    compile dataDependencies.adapterRxjava
+    compile dataDependencies.converterJackson
+    compile dataDependencies.converterGson
+    compile dataDependencies.rxandroid
+    compile dataDependencies.rxjava
+    provided dataDependencies.javaxAnnotation
 }

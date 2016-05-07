@@ -21,6 +21,7 @@ ext {
     daggerVersion = '2.0.2'
     javaxAnnotationVersion = '10.0-b28'
     converterJacksonVersion = '2.0.1'
+    converterGsonVersion = '2.0.1'
 
     presentationDependencies = [
             appcompat:           "com.android.support:appcompat-v7:${appcompatVersion}",
@@ -49,12 +50,17 @@ ext {
     ]
 
     dataDependencies = [
+            appcompat:          "com.android.support:appcompat-v7:${appcompatVersion}",
             daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
             dagger:             "com.google.dagger:dagger:${daggerVersion}",
             loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}",
             retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             adapterRxjava:      "com.squareup.retrofit2:adapter-rxjava:${adapterRxjavaVersion}",
             converterJackson:   "com.squareup.retrofit2:converter-jackson:${converterJacksonVersion}",
+            converterGson:      "com.squareup.retrofit2:converter-gson:${converterGsonVersion}",
+            rxandroid:          "io.reactivex:rxandroid:${rxandroidVersion}",
+            rxjava:             "io.reactivex:rxjava:${rxjavaVersion}",
+            javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}"
     ]
 
     dataTestDependencies = [
