@@ -22,7 +22,7 @@ public class ContributorEntityDataMapper {
     }
 
     public Contributor transform(ContributorEntity contributorEntity) {
-        Contributor contributor = null;
+        Contributor contributor = new Contributor();
         if (contributorEntity != null) {
             contributor.setContributions(contributorEntity.getContributions());
             contributor.setLogin(contributorEntity.getLogin());
