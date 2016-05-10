@@ -20,7 +20,7 @@ public class ContributorDataStoreFactory {
 
     @Inject
     public ContributorDataStoreFactory(Context context) {
-        this.context = context;
+        this.context = context.getApplicationContext();
     }
 
     public ContributorDataStore createCloudDataStore() {

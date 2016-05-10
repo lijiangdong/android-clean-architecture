@@ -17,14 +17,14 @@ public class GetContributorList extends UseCase {
     private final ContributorRepository contributorRepository;
 
     @Inject
-    protected GetContributorList(ContributorRepository contributorRepository,ThreadExecutor threadExecutor,
+    public GetContributorList(ContributorRepository contributorRepository,ThreadExecutor threadExecutor,
                                  PostExecutionThread postExecutionThread) {
         super(threadExecutor, postExecutionThread);
         this.contributorRepository = contributorRepository;
     }
 
     @Override
-    protected Observable buildUseCaseObservable() {
+    public Observable buildUseCaseObservable() {
         return this.contributorRepository.contributors();
     }
 }

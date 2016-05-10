@@ -18,10 +18,10 @@ public class GitHubService {
     public static GitHubApi getMspApiService(){
 
         Retrofit retrofit = new Retrofit.Builder()
-                .client(createOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .baseUrl(BASE_URL)
+                .client(createOkHttpClient())
                 .build();
 
         return retrofit.create(GitHubApi.class);

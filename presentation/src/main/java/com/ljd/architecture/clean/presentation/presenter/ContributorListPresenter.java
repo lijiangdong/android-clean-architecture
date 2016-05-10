@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.ljd.architecture.clean.domain.Contributor;
 import com.ljd.architecture.clean.domain.interactor.DefaultSubscriber;
+import com.ljd.architecture.clean.domain.interactor.GetContributorList;
 import com.ljd.architecture.clean.domain.interactor.UseCase;
 import com.ljd.architecture.clean.presentation.internal.di.PerActivity;
 import com.ljd.architecture.clean.presentation.mapper.ContributorModelDataMapper;
@@ -67,7 +68,7 @@ public class ContributorListPresenter implements Presenter {
         final Collection<ContributorModel> contributorModelCollection =
                 this.contributorModelDataMapper.transform(contributorCollection);
         for (ContributorModel contributorModel : contributorModelCollection){
-            Log.d("contributorModel",contributorModel.toString());
+            Log.e("contributorModel",contributorModel.toString());
         }
     }
 

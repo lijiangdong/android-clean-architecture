@@ -8,6 +8,7 @@ import com.ljd.architecture.clean.presentation.R;
 import com.ljd.architecture.clean.presentation.internal.di.HasComponent;
 import com.ljd.architecture.clean.presentation.internal.di.components.ContributorComponent;
 import com.ljd.architecture.clean.presentation.internal.di.components.DaggerContributorComponent;
+import com.ljd.architecture.clean.presentation.view.fragment.ContributorListFragment;
 
 public class UserListActivity extends BaseActivity implements HasComponent<ContributorComponent>{
 
@@ -22,6 +23,9 @@ public class UserListActivity extends BaseActivity implements HasComponent<Contr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_list);
         this.initializeInjector();
+        if (savedInstanceState == null) {
+            addFragment(R.id.fragmentContainer, new ContributorListFragment());
+        }
     }
 
     private void initializeInjector(){

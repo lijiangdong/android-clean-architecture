@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 import com.ljd.architecture.clean.presentation.R;
 
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
 public class MainActivity extends BaseActivity {
 
     @Override

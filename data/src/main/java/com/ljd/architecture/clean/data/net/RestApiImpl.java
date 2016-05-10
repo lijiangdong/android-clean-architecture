@@ -1,6 +1,7 @@
 package com.ljd.architecture.clean.data.net;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.ljd.architecture.clean.data.entity.ContributorEntity;
 import com.ljd.architecture.clean.data.entity.mapper.ContributorEntityJsonMapper;
@@ -8,7 +9,9 @@ import com.ljd.architecture.clean.data.entity.mapper.ContributorEntityJsonMapper
 import java.io.IOException;
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import rx.Observable;
+import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -33,7 +36,7 @@ public class RestApiImpl implements RestApi {
 
         return GitHubService
                 .getMspApiService()
-                .contributors("retrofit","contributors")
+                .contributors("square","retrofit")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .flatMap(responseBody ->
@@ -52,5 +55,5 @@ public class RestApiImpl implements RestApi {
 
                     }));
     }
-    
+
 }

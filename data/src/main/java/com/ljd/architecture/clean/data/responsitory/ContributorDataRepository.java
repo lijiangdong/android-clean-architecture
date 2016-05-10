@@ -21,8 +21,8 @@ import rx.Observable;
 @Singleton
 public class ContributorDataRepository implements ContributorRepository {
 
-    ContributorDataStoreFactory contributorDataStoreFactory;
-    ContributorEntityDataMapper contributorEntityDataMapper;
+    private final ContributorDataStoreFactory contributorDataStoreFactory;
+    private final ContributorEntityDataMapper contributorEntityDataMapper;
 
     @Inject
     public ContributorDataRepository(ContributorDataStoreFactory contributorDataStoreFactory,
@@ -30,9 +30,6 @@ public class ContributorDataRepository implements ContributorRepository {
         this.contributorDataStoreFactory = contributorDataStoreFactory;
         this.contributorEntityDataMapper = contributorEntityDataMapper;
     }
-
-
-
 
     @Override
     public Observable<List<Contributor>> contributors() {

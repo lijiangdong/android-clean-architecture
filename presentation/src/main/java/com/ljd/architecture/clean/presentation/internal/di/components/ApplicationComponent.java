@@ -23,6 +23,7 @@ public interface ApplicationComponent {
 
     //Exposed to sub-graphs.
     Context context();
+
     ThreadExecutor threadExecutor();
     PostExecutionThread postExecutionThread();
     ContributorRepository contributorRepository();
